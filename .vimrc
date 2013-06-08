@@ -51,7 +51,9 @@ endif
 "-------------------------------------------------------------------------------
 let mapleader = ","              " キーマップリーダー
 set scrolloff=5                  " スクロール時の余白確保
-"set textwidth=0                  " 一行に長い文章を書いていても自動折り返しをしない
+set formatoptions=q
+set textwidth=0                  " 一行に長い文章を書いていても自動折り返しをしない
+set tw=0
 set nobackup                     " バックアップ取らない
 set autoread                     " 他で書き換えられたら自動で読み直す
 set noswapfile                   " スワップファイル作らない
@@ -82,4 +84,8 @@ set nocompatible        " Use Vim defaults (much better!)
                         " than 50 lines of registers
 set history=50          " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
+
+" ステータスバー
+set statusline=%F%m%r%h%w\%=[FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set laststatus=2
 
