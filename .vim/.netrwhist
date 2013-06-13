@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Volumes/uliza_work/_info/_UlizaServers'
+let g:netrw_dirhist_2='/Users/ryo/tmp/segment_for_multiangle/utadas/utada_384_2'
+let g:netrw_dirhist_3='/Users/ryo/_servers/rt_vm'
+let g:netrw_dirhist_4='/Users/ryo/.vim'
+let g:netrw_dirhist_5='/Users/ryo/_lab/osmf_build_env2/pc_debug'
+let g:netrw_dirhist_6='/Users/ryo/dotfiles/.git'
