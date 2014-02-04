@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # set symbolic links 
-DOT_FILES=( .vimrc .vim .dir_colors .gitconfig .gitignore )
+DOT_FILES=( .dir_colors .gitconfig .gitignore )
 
 for file in ${DOT_FILES[@]}
 do
