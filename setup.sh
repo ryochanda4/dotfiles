@@ -1,8 +1,17 @@
-
 #!/bin/bash
 
+# change current directory
+HOME_DIR=`dirname $0`
+cd ${HOME_DIR}
+
+# vim setup
+mkdir .vim
+cd .vim
+curl https://raw.github.com/avelino/.vimrc/master/bootstrap.sh -o - | sh
+
 # set symbolic links 
-DOT_FILES=( .dir_colors .gitignore .bash_profile .bashrc )
+cd ..
+DOT_FILES=( .dir_colors .bash_profile .bashrc .vim )
 
 for file in ${DOT_FILES[@]}; do ln -s $HOME/dotfiles/$file $HOME/$file; done
 
