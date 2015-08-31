@@ -26,17 +26,17 @@ export PATH=$PATH:$HOME/bin
 # Reference URL
 # http://qiita.com/checkpoint/items/f8e65380d9cb0182218d
 
-export PATH=$HOME/.rbenv/bin:$PATH
-export PATH=$HOME/.rbenv/shims:$PATH
-eval "$(rbenv init -)"
+#export PATH=$HOME/.rbenv/bin:$PATH
+#export PATH=$HOME/.rbenv/shims:$PATH
+#eval "$(rbenv init -)"
 
 case "${OSTYPE}" in
 
 	### for mac ###
 	darwin*)
 		# android sdk
-		export PATH=$HOME/_adt/adt-bundle-mac-x86_64/sdk/tools:$PATH
-		export PATH=$HOME/_adt/adt-bundle-mac-x86_64/sdk/platform-tools:$PATH
+#		export PATH=$HOME/_adt/adt-bundle-mac-x86_64/sdk/tools:$PATH
+#		export PATH=$HOME/_adt/adt-bundle-mac-x86_64/sdk/platform-tools:$PATH
 		
 		# dircolors
 		# --------------------------------------- #
