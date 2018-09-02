@@ -529,3 +529,7 @@ let g:tagbar_type_ruby = {
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+"" command line mode
+set wildmenu
+set history=5000
