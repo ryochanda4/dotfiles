@@ -100,7 +100,9 @@ NeoBundle "scrooloose/syntastic"
 
 
 "" HTML Bundle
-NeoBundle 'amirh/HTML-AutoCloseTag'
+"NeoBundle 'amirh/HTML-AutoCloseTag'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'tpope/vim-haml'
