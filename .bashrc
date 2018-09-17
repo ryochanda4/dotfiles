@@ -4,7 +4,7 @@
 export PATH=$PATH:$HOME/bin
 
 # ruby
-# ----------------------------------------#  
+# ----------------------------------------#
 # Requirement:
 #  1. install rbenv , ruby-build
 #    $ brew install readline ruby-build rbenv
@@ -12,7 +12,7 @@ export PATH=$PATH:$HOME/bin
 #    $ export PATH=$HOME/.rbenv/bin:$PATH
 #    $ export PATH=$HOME/.rbenv/shims:$PATH
 #    $ eval "$(rbenv init -)"
-#  3. install ruby you need 
+#  3. install ruby you need
 #    $ rbenv install 1.9.3-p448
 #    $ rbenv install 2.0.0-p247
 #  4. see ruby versions you installed
@@ -20,7 +20,7 @@ export PATH=$PATH:$HOME/bin
 #  5. see ruby version which is used in this Mac
 #    $ rbenv global
 #  6. change ruby version
-#    $ rbenv global 1.9.3-p448 
+#    $ rbenv global 1.9.3-p448
 #    $ ruby -v
 #
 # Reference URL
@@ -37,7 +37,7 @@ case "${OSTYPE}" in
 		# android sdk
 #		export PATH=$HOME/_adt/adt-bundle-mac-x86_64/sdk/tools:$PATH
 #		export PATH=$HOME/_adt/adt-bundle-mac-x86_64/sdk/platform-tools:$PATH
-		
+
 		# dircolors
 		# --------------------------------------- #
 		# Requirement:
@@ -46,11 +46,18 @@ case "${OSTYPE}" in
 		# 
 		# Reference URL
 		# http://qiita.com/yuyuchu3333/items/84fa4e051c3325098be3
-		
+
 		eval $(gdircolors $HOME/.dir_colors)
 		alias ls="gls --color=auto"
 		alias ll="gls -laG --color=auto"
 
+		# setting for git completion
+		# Reference URL
+		#  https://qiita.com/koyopro/items/3fce94537df2be6247a3
+		source /usr/local/etc/bash_completion.d/git-prompt.sh
+		source /usr/local/etc/bash_completion.d/git-completion.bash
+		GIT_PS1_SHOWDIRTYSTATE=true
+		export PS1='\h\[\033[00m\]:\W\[\033[31m\]$(__git_ps1 [%s])\[\033[00m\]\$ '
 	;;
 	### for linux ###
 	linux*)
@@ -68,10 +75,3 @@ case "${OSTYPE}" in
   	;;
 esac
 
-# setting for git completion
-# Reference URL
-#  https://qiita.com/koyopro/items/3fce94537df2be6247a3
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
-GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\h\[\033[00m\]:\W\[\033[31m\]$(__git_ps1 [%s])\[\033[00m\]\$ '
