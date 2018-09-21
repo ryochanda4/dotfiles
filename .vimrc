@@ -10,7 +10,6 @@ if has('vim_starting')
 endif
 
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
-
 if !filereadable(neobundle_readme)
   echo "Installing NeoBundle..."
   echo ""
@@ -539,4 +538,3 @@ endif
 
 "" command line mode
 set wildmenu
-set history=5000
